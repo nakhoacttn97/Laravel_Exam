@@ -1,3 +1,8 @@
+@extends('shared/dashboard')
+
+@section('title', 'Add Category')
+
+@section('body')
 <a href="/category">Back Category</a>
 <p>{{$msg}}</p>
 <form method="post">
@@ -11,3 +16,4 @@
         <button>Save Changes</button>
     </div>
 </form>
+@stop

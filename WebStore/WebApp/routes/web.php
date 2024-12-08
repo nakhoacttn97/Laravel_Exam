@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UploadController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -24,4 +27,19 @@ Route::controller(CategoryController::class)->group(function(){
     Route::match(['get', 'post'], '/category/add', 'add');
     Route::match(['get', 'post'], '/category/edit/{id}', 'edit');
     Route::get('/category/delete/{id}', 'delete');
+});
+
+//Route Admin
+Route::get('/dashboard', [AdminController::class, 'index']);
+
+//Route Upload
+Route::controller(UploadController::class)->group(function(){
+    Route::get('/upload', 'index');
+    Route::match(['get', 'post'], '/upload/add', 'add');
+});
+
+//Route product
+Route::controller(ProductController::class)->group(function(){
+    Route::get('/product', 'index');
+    Route::match(['get','post'], '/product/add', 'add');
 });

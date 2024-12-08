@@ -176,6 +176,9 @@
             <ul>
                 <li><a href="/brand">Brand</a></li>
                 <li><a href="/category">Category</a></li>
+                <li><a href="/product">Product</a></li>
+                <li><a href="dashboard">Dashboard</a></li>
+                <li><a href="/upload">Upload</a></li>
             </ul>
         </div>
     </body>

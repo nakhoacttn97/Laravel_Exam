@@ -1,3 +1,8 @@
+@extends('shared/dashboard')
+
+@section('title', 'Edit Category')
+
+@section('body')
 <p>{{$msg}}</p>
 <form method="post">
     @csrf
@@ -10,3 +15,4 @@
         <button>Save Changes</button>
     </div>
 </form>
+@stop
